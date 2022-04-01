@@ -1,38 +1,39 @@
-const list = document.querySelector('li');
+const list = document.querySelector('ul');
 const button = document.querySelector('button');
+const answers = document.getElementsByName('answers');
 let question = document.getElementById('question');
 let q = 0; // question controller
 let score = 0;
-const answers = document.getElementsByName('answers');
+
 let answer;
 
 let allQuestions = [{
-        question: 'Hur många planeter finns det?',
+        question: 'How many planets are there in our solar system?',
         choices: ['8', '10', '9', '11'],
         correctAnswer: '8',
     },
     {
-        question: 'Hur många år är världens äldsta människa?',
+        question: 'How old is the oldest human in the world?',
         choices: ['92', '81', '111', '119'],
         correctAnswer: '119',
     },
     {
-        question: 'Vad heter Fb grundaren?',
-        choices: ['Kajsa Lindholm', 'Stefan Löfven', 'Mark Zuckerberg', 'Markoolio'],
+        question: 'What is the name of facebook founder?',
+        choices: ['Linus Torvalds', 'Stefan Löfven', 'Mark Zuckerberg', 'Jensen Huang'],
         correctAnswer: 'Mark Zuckerberg',
     },
     {
-        question: 'Vad är 12 + 7 - 5 * 3 ?',
+        question: 'Vhat is 12 + 7 - 5 * 3 ?',
         choices: ['42', '41', '52', '72'],
         correctAnswer: '42',
     },
     {
-        question: 'Världens äldsta bilmärke?',
+        question: 'which is the world\'s oldest car brand?',
         choices: ['BMW', 'Audi', 'Volvo', 'Peugeot'],
         correctAnswer: 'Peugeot',
     },
     {
-        question: 'Sveriges fjärde största stad?',
+        question: 'Which is Sweden\'s fourth largest city?',
         choices: ['Uppsala', 'Sundsvall', 'Eskilstuna', 'Stockholm'],
         correctAnswer: 'Uppsala'
     }
@@ -42,9 +43,9 @@ let allQuestions = [{
 function renderQuestion() {
     if (q >= allQuestions.length) {
         list.style.color = 'green';
-        question.innerHTML = 'Spelet är över!';
-        list.innerHTML = `Du fick ${score} poäng! av ${allQuestions.length}`;
-        button.textContent = 'Tillverkad av Bertil Rövsång'
+        question.innerHTML = 'Game Over!';
+        list.innerHTML = `You got ${score} points! of ${allQuestions.length}`;
+        button.textContent = 'Gave over!'
     } else {
 
         for (let i = 0; i < allQuestions[q].choices.length; i++) {
@@ -70,7 +71,7 @@ function renderQuestion() {
 
             const radios = document.getElementsByName('answers');
             if (!radios[0].checked && !radios[1].checked && !radios[2].checked && !radios[3].checked) {
-                alert('Du måste välja ett alternativ')
+                alert('You must select an option!')
             } else {
                 q++;
 
