@@ -34,12 +34,7 @@ let allQuestions = [{
     {
         question: 'Sveriges fjärde största stad?',
         choices: ['Uppsala', 'Sundsvall', 'Eskilstuna', 'Stockholm'],
-        correctAnswer: 'Uppsala',
-    },
-    {
-        question: 'Sveriges fjärde största stad?',
-        choices: ['Uppsala', 'Sundsvall', 'Eskilstuna', 'Stockholm'],
-        correctAnswer: 'Uppsala',
+        correctAnswer: 'Uppsala'
     }
 ];
 
