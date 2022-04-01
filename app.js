@@ -26,6 +26,16 @@ let allQuestions = [{
         choices: ['42', '41', '52', '72'],
         correctAnswer: '42',
     },
+    {
+        question: 'Världens äldsta bilmärke?',
+        choices: ['BMW', 'Audi', 'Volvo', 'Peugeot'],
+        correctAnswer: 'Peugeot',
+    },
+    {
+        question: 'Sveriges fjärde största stad?',
+        choices: ['Uppsala', 'Sundsvall', 'Eskilstuna', 'Stockholm'],
+        correctAnswer: 'Uppsala',
+    },
 ];
 
 

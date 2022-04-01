@@ -42,9 +42,11 @@ ul li {
     margin: 1rem 0;
 }
 
-ul li label {
-    cursor: pointer;
+label {
+    margin-left: 1rem;
+    font-size: 1.2rem;
 }
+
 
 button {
     background-color: #732d91;
@@ -62,4 +64,3 @@ button {
 button:hover {
     background-color: #611781;
 }
-
